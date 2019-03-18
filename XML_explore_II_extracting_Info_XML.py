@@ -32,6 +32,8 @@ print('Files in the folder:')
 for i, w in enumerate(onlyfiles):
     print(i+1, '--' ,w)
 
+onlyfiles = onlyfiles[400:]
+
 t0 = time.time()
 
 columns=['filename',
@@ -266,4 +268,4 @@ for fileid, teixmlfile in enumerate(onlyfiles):
     print('Processing time is {0:.2f} minutes for file {1}'.format(((time.time() - t0) / 60), fileid))
 
 
-df_lemmas.to_pickle('./df_lemmas.pkl')
+df_lemmas.to_pickle('./df_lemmas400-729.pkl')
